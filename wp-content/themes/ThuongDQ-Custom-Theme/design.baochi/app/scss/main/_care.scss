@@ -1,0 +1,31 @@
+.care {
+    border: 0px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    .panel-heading {
+        @include title-box(88px);
+    }
+    .panel-body {
+        padding: 0px;
+        &>a {
+            display: block;
+            float: left;
+            width: 360px;
+            img {
+                height: 197px;
+            }
+        }
+        .info {
+            display: block;
+            width: calc(100% - 370px);
+            float: right;
+            @extend %info;
+            .category {
+                margin: 0px;
+            }
+            .title {
+                font-size: 17px;
+            }
+        }
+    }
+}

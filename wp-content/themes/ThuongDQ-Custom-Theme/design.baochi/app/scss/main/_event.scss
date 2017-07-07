@@ -1,0 +1,13 @@
+.event {
+    .panel-body {
+        .item {
+            width: calc(50% - 8px);
+            &+.item {
+                margin-left: 16px;
+            }
+            .title {
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.content-left {
+    display: block;
+    width: calc(100% - 215px);
+    float: left;
+    @import 'content-left/list-post-new';
+    @import 'content-left/group-child-category';
+}

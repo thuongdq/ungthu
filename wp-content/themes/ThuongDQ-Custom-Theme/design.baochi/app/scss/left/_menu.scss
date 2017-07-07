@@ -1,0 +1,44 @@
+.menu {
+    border: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    .panel-heading {
+        padding: 0px;
+        border: 0px;
+        h2 {
+            margin: 0px;
+            padding: 0px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 33px;
+            background: $color_17;
+            color: $color_w;
+        }
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1px;
+                }
+                a {
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    background: $color_6;
+                    padding: 0px 10px;
+                    line-height: 27px;
+                }
+                &.current-menu-item {
+                    a {
+                        color: $color_17;
+                    }
+                }
+            }
+        }
+    }
+}

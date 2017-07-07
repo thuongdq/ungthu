@@ -1,0 +1,11 @@
+header {
+    margin-top: 0px;
+    background: $color_1;
+    &>.container {
+        min-height: 60px;
+    }
+    @import 'logo';
+    @import 'banner';
+    @import 'menu';
+    @import 'menu-top-fix';
+}

@@ -1,0 +1,30 @@
+.list-video-new {
+    border: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    .panel-heading {
+        @include title-box(82px);
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            li {
+                padding: 5px 0px;
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+                @extend %info;
+                img {
+                    height: 122px;
+                }
+                .category {
+                    margin-top: 3px;
+                    margin-bottom: 1px;
+                }
+            }
+        }
+    }
+}

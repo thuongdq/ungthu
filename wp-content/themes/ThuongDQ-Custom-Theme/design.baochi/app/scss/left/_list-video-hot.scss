@@ -1,0 +1,32 @@
+.list-video-hot {
+    border: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    .panel-heading {
+        @include title-box(97px);
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            li {
+                border-left: 5px solid $color_5;
+                background: $color_6;
+                display: table;
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 1px;
+                }
+                a {
+                    padding: 5px 0px 5px 15px;
+                    @include background($url_icon, no-repeat, -40px 10px);
+                    display: block;
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    color: $color_b;
+                }
+            }
+        }
+    }
+}

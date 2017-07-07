@@ -1,0 +1,23 @@
+.video-main-other {
+    display: block;
+    float: left;
+    width: 154px;
+    margin-left: 14px;
+    img {
+        height: 92px;
+    }
+    @extend %info;
+    .title {
+        line-height: 16px;
+        margin: 7px 0px;
+    }
+    &.detail {
+        .item {
+            margin-bottom: 10px;
+            .title {
+                margin-top: 5px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

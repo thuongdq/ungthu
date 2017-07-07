@@ -1,0 +1,46 @@
+.list-post-video {
+    border: 0px;
+    box-shadow: none;
+    // margin: 0px;
+    margin-bottom: 10px;
+    .panel-heading {
+        @include title-box(88px);
+    }
+    .panel-body {
+        padding: 0px;
+        .group {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .item {
+            display: block;
+            float: left;
+            width: calc(25% - 9px);
+            &+.item {
+                margin-left: 12px;
+            }
+            @extend %info;
+            .title {
+                margin-top: 5px;
+                display: inline-block;
+            }
+            .video-thumbnail {
+                display: block;
+                float: left;
+                width: 100%;
+                position: relative;
+            }
+        }
+    }
+    &.detail {
+        .group {
+            margin-bottom: 0px;
+        }
+        .item {
+            .title {
+                margin-top: 4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.post-special {
+    padding: 0px;
+    margin-bottom: 10px;
+    border: 0px;
+    box-shadow: 0px;
+    .panel-heading {
+        @include title-box(97px);
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            li {
+                position: relative;
+                &::after {
+                    counter-increment: count_viewest;
+                    content: counter(count_viewest);
+                    display: block;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    color: $color_w;
+                    font-size: 30px;
+                    height: 64px;
+                    width: 52px;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    padding-top: 10px;
+                    padding-left: 20px;
+                }
+                &+li {
+                    padding: 15px 52px 15px 18px;
+                    background: $color_2;
+                }
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color_13;
+                }
+                a {
+                    display: block;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    color: $color_w;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                &:first-child {
+                    position: relative;
+                    img {
+                        height: 272px
+                    }
+                    a {
+                        &:first-child {
+                            display: block;
+                            width: 100%;
+                            padding-bottom: 26px;
+                        }
+                        &:last-child {
+                            @include background($url_icon, repeat-x, 0px -86px);
+                            position: absolute;
+                            bottom: 0px;
+                            padding: 245px 52px 16px 18px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

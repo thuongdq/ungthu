@@ -1,0 +1,36 @@
+.group-child-category {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color_12;
+    .panel {
+        border: 0px;
+        box-shadow: none;
+        margin: 0px;
+        width: 50%;
+        float: left;
+        .panel-heading {
+            @include title-box(88px);
+            padding: 7px 0;
+            margin-bottom: -5px;
+        }
+        .panel-body {
+            padding: 0px;
+            @extend %info;
+            .title {
+                margin: 5px 0px 0px 0px;
+            }
+            img {
+                height: 121px;
+            }
+        }
+        &:first-child {
+            padding-right: 25px;
+        }
+        &:nth-child(2) {
+            padding-left: 25px;
+            border-left: 1px solid $color_12;
+        }
+    }
+}

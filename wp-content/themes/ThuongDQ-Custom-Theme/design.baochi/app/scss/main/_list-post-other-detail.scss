@@ -1,0 +1,51 @@
+.list-post-other-detail {
+    border: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    .panel-heading {
+        @include title-box(88px);
+    }
+    .panel-body {
+        padding: 0px;
+        .main {
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $color_5;
+            margin-bottom: 5px;
+            &>.item {
+                display: block;
+                float: left;
+                width: calc(25% - 12px);
+                &+.item {
+                    margin-left: 16px;
+                }
+                a {
+                    display: block;
+                    font-size: 15x;
+                    line-height: 17px;
+                    font-weight: bold;
+                    font-family: 'Roboto Slab', serif;
+                }
+            }
+        }
+        .other {
+            .group {
+                display: inline-block;
+                width: 100%;
+                a {
+                    @include background($url_icon, no-repeat, 0px -59px);
+                    display: block;
+                    float: left;
+                    width: calc(50% - 8px);
+                    font-weight: bold;
+                    font-family: 'Roboto Slab', serif;
+                    font-size: 14px;
+                    padding-left: 14px;
+                    &+a {
+                        margin-left: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

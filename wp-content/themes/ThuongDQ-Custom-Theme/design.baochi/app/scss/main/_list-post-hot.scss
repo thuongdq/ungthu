@@ -1,0 +1,44 @@
+.list-post-hot {
+    width: 300px;
+    display: block;
+    float: right;
+    .panel {
+        border: 0px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        .panel-heading {
+            @include title-box(97px);
+        }
+        .panel-body {
+            padding: 0px;
+            .item {
+                border-left: 5px solid $color_5;
+                background: $color_6;
+                padding: 5px;
+                display: table;
+                width: 100%;
+                margin-bottom: 1px;
+                a {
+                    display: block;
+                    float: left;
+                    &:first-child {
+                        width: 89px;
+                        img {
+                            height: 53px;
+                        }
+                    }
+                    &:last-child {
+                        width: calc(100% - 96px);
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-weight: bold;
+                        float: right;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

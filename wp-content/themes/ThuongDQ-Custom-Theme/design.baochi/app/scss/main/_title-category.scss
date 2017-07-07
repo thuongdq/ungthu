@@ -1,0 +1,83 @@
+.title-category {
+    display: block;
+    margin-bottom: 10px;
+    a {
+        padding: 0px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 29px;
+        padding-bottom: 6px;
+        border-radius: 0px;
+        &:hover,
+        &:focus {
+            background: none;
+        }
+        &.current-category {
+            margin: 0px;
+            float: left;
+            color: $color_1;
+            padding-bottom: 0px;
+            border-bottom: 6px solid $color_2;
+            margin-right: 13px;
+        }
+    }
+    ul {
+        @include background($url_icon, repeat-x, 0px -388px);
+        display: block;
+        li {
+            a {
+                padding-right: 13px;
+            }
+        }
+    }
+}
+
+.category-child {
+    margin-bottom: 10px;
+    .pathological {
+        padding: 7px 14px;
+        background: $color_6;
+        border: 1px solid $color_11;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: -5px;
+        margin-top: 10px;
+        .group {
+            display: block;
+            float: left;
+            &+.group {
+                margin-left: 32px;
+            }
+            .item {
+                h2 {
+                    color: $color_2;
+                    margin: 0px 0px 5px 0px;
+                }
+                h2,
+                a {
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    padding: 0px;
+                }
+                ul {
+                    list-style-type: square;
+                    color: $color_2;
+                    padding-left: 13px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .more {
+        @extend %view-table;
+        margin: 0px 0px 10px 0px;
+        .current-menu-item {
+            a {
+                color: $color_1;
+            }
+        }
+    }
+}

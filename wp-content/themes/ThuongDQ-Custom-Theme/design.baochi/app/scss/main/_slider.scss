@@ -1,0 +1,115 @@
+.slider {
+    padding: 0px;
+    margin-bottom: 10px;
+    border: 0px;
+    box-shadow: 0px;
+    position: relative;
+    display: inline-block;
+    border-radius: 0px;
+    .panel-heading {
+        @include title-box(97px);
+    }
+    .panel-body {
+        display: inline-block;
+        padding: 0px;
+        .bx-wrapper {
+            border: 0px;
+            box-shadow: none;
+            margin: 0px;
+            img {
+                height: 142px;
+            }
+            .bx-prev {
+                height: 90px;
+                margin-top: -74px;
+                margin-left: -10px;
+                width: 30px;
+                @include background($url_icon, no-repeat, 0 -741px);
+                opacity: 0.5;
+                &:hover {
+                    opacity: 0.9
+                }
+            }
+            .bx-next {
+                height: 90px;
+                margin-top: -74px;
+                margin-right: -10px;
+                width: 30px;
+                @include background($url_icon, no-repeat, 0 -835px);
+                opacity: 0.5;
+                &:hover {
+                    opacity: 0.9
+                }
+            }
+        }
+        .bx-viewport {
+            ul {
+                li {
+                    @extend %info;
+                    .title {
+                        font-size: 15px;
+                        line-height: 17px;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+        .bx-pager {
+            // position: absolute;
+            top: -33px;
+            text-align: right;
+            padding: 0px;
+            height: 30px;
+            .bx-pager-link {
+                width: 8px;
+                height: 8px;
+            }
+            a {
+                background: $color_5;
+            }
+            a.active,
+            a:focus,
+            a:hover {
+                background: $color_2;
+            }
+        }
+    }
+    &.cLeft {
+        .bx-next,
+        .bx-prev {
+            margin-top: -85px !important;
+        }
+    }
+    &.list-category {
+        .bx-wrapper {
+            .video-thumbnail {
+                display: block;
+                float: left;
+                width: 100%;
+                position: relative;
+            }
+            .bx-prev {
+                @include background($url_icon, no-repeat, 0 -552px);
+                margin-top: -69px !important;
+            }
+            .bx-next {
+                @include background($url_icon, no-repeat, 0 -646px);
+                margin-top: -69px !important;
+            }
+        }
+        .bx-viewport {
+            ul {
+                li {
+                    .title {
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-top: 7px;
+                    }
+                    img {
+                        height: 121px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,343 @@
+    @import "bootstrap";
+    //font-family: 'Roboto', sans-serif;
+    //font-family: 'Roboto Slab', serif;
+    // @import "library/jquery.smartmenus.bootstrap";
+    // @import "library/lightslider";
+    @import "library/jquery.bxslider";
+    body {
+        background-color: #f8f8f8;
+        font-size: 14px;
+        counter-reset: count_viewest;
+    }
+    
+    a {
+        color: #333333;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            background: none;
+        }
+    }
+    
+    .img-responsive {
+        margin: 0px auto;
+    }
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    h4 {
+        margin-top: 25px;
+    }
+    
+    .row {
+        margin-bottom: 20px;
+    }
+    
+    .row .row {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    [class*="col-"] {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #eee;
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid #ddd;
+        border: 1px solid rgba(86, 61, 124, .2);
+    }
+    
+    hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    section,
+    aside {
+        width: 100%;
+        display: block;
+        >a>img {
+            width: auto;
+            display: block;
+            margin: 0px auto;
+        }
+    }
+    
+    $url_icon:"../img/icon.png";
+    $color_w:#fff;
+    $color_b: #000;
+    $color_1:#8d0003;
+    $color_2: #9f0004;
+    $color_3: #660000;
+    $color_4: #333333;
+    $color_5: #dfdfdf;
+    $color_6: #ebebeb;
+    $color_7: #d54c4f;
+    $color_8: #ffffd8;
+    $color_9: #af4d4f;
+    $color_10: #d1999a;
+    $color_11:#d7d7d7;
+    $color_12:#efefef;
+    $color_13: #bc4d50;
+    $color_14: #1f2224;
+    $color_15:#31363a;
+    $color_16: #9c9b9b;
+    $color_17: #bd0f13;
+    @mixin box($border, $border-radius, $padding) {
+        border: $border;
+        border-radius: $border-radius;
+        padding: $padding;
+    }
+    
+    @mixin border($top, $right, $bottom, $left) {
+        border-top: $top;
+        border-right: $right;
+        border-bottom: $bottom;
+        border-left: $left;
+    }
+    
+    @mixin border-radius($top-left, $top-right, $bottom-left, $bottom-right) {
+        border-top-left-radius: $top-left;
+        border-top-right-radius: $top-right;
+        border-bottom-left-radius: $bottom-left;
+        border-bottom-right-radius: $bottom-right;
+    }
+    
+    @mixin background-before( $width, $url, $repeat, $coordinates) {
+        padding-left: $width;
+        @include background($url, $repeat, $coordinates);
+    }
+    
+    @mixin background($url, $repeat, $coordinates) {
+        background: url($url) $repeat $coordinates;
+    }
+    
+    @mixin multiple-background($url, $before, $after, $between, $between_repeat) {
+        background: url($url) $before no-repeat, url($url) 100% $after no-repeat, url($url) $between $between_repeat;
+    }
+    
+    @mixin gradient($linear, $linear-to, $from, $between, $between-percent, $to) {
+        background: $from;
+        background: -moz-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+        background: -webkit-gradient($linear top, right top, color-stop(0%, $from), color-stop($between-percent, $between), color-stop(100%, $to));
+        background: -webkit-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+        background: -o-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+        background: -ms-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+        background: linear-gradient($linear-to, $from 0%, $between $between-percent, $to 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+    }
+    
+    @mixin boxshadow($left, $top, $thickness, $width, $color) {
+        -moz-box-shadow: $left $top $thickness $width $color;
+        -webkit-box-shadow: $left $top $thickness $width $color;
+        box-shadow: $left $top $thickness $width $color;
+    }
+    
+    @mixin padding($top, $right, $bottom, $left) {
+        padding-top: $top;
+        padding-left: $left;
+        padding-right: $right;
+        padding-bottom: $bottom;
+    }
+    
+    @mixin margin($top, $right, $bottom, $left) {
+        margin-top: $top;
+        margin-left: $left;
+        margin-right: $right;
+        margin-bottom: $bottom;
+    }
+    
+    @mixin placeholder($color) {
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: $color;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $color;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: $color;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: $color;
+        }
+    }
+    
+    @mixin title-box($width_before) {
+        border-radius: 0px;
+        border-bottom: 0px;
+        border-top: 6px solid $color_5;
+        padding: 5px 0px 0px 0px;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        &::before {
+            position: absolute;
+            top: -6px;
+            content: " ";
+            height: 6px;
+            width: $width_before;
+            display: block;
+            background: $color_2;
+        }
+        h2 {
+            margin: 0px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            text-transform: uppercase;
+            display: block;
+            float: left;
+        }
+        .nomal {
+            li {
+                padding: 3px 0px;
+                a {
+                    padding: 0px 7px;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-transform: uppercase;
+                    border-radius: 0px;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:last-child {
+                    a {
+                        padding-right: 0px;
+                    }
+                }
+                &+li {
+                    a {
+                        border-left: 1px solid #000;
+                    }
+                }
+            }
+        }
+        .nomal-more {
+            margin-top: 5px;
+            margin-bottom: 3px;
+            display: inline-block;
+            width: 100%;
+            background: $color_12;
+            .nomal {
+                li {
+                    padding: 5px 0px;
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .more {
+            @extend %view-table;
+        }
+    }
+    
+    %view-table {
+        border: 1px solid $color_11;
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        li {
+            background: $color_6;
+            border-top: 1px solid $color_11;
+            width: 16.66%;
+            margin: 0px;
+            border-right: 1px solid $color_11;
+            &:nth-child(-n+6) {
+                border-top: 0px;
+            }
+            &:nth-child(6n+6) {
+                width: calc(100% - 5*16.66%);
+                border-right: 0px;
+            }
+            a {
+                padding: 0px 0px 0px 10px;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+    
+    %info {
+        .category {
+            text-transform: uppercase;
+            color: #9f0004;
+            display: block;
+            width: 100%;
+            font-family: Roboto, sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+        }
+        .title {
+            display: block;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        span {
+            display: block;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            width: 100%;
+        }
+        .video-thumbnail {
+            position: relative;
+            &:after {
+                content: " ";
+                position: absolute;
+                z-index: 2;
+                width: 48px;
+                height: 48px;
+                background: red;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                @include background($url_icon, no-repeat, 0px -499px);
+            }
+        }
+        ul {
+            padding: 0px;
+            list-style-type: none;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            li {
+                padding: 6px 0px 7px 14px;
+                border-top: 1px solid $color_12;
+                @include background($url_icon, no-repeat, 0px -55px);
+                a {
+                    font-family: 'Roboto Slab', serif;
+                    font-size: 14px;
+                    line-height: 15px;
+                    display: block;
+                }
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+    
+    @import "advertising/advertising";
+    @import "header/header";
+    @import "menu/menu-top";
+    @import "left/left";
+    @import "main/main";
+    @import "right/right";
+    @import "footer/footer";
+    @import "responsive/responsive";

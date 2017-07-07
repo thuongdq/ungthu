@@ -1,0 +1,42 @@
+.pagination {
+    margin: 0px;
+    float: right;
+    li {
+        a,
+        span,
+        .dots {
+            margin-left: 10px;
+            border-radius: 4px;
+            background: $color_5;
+            border: 0px;
+            color: $color_b;
+            font-size: 18px;
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+            padding: 5px 16px;
+            &:hover,
+            &:focus,
+            &.current {
+                background: $color_2;
+                color: $color_w;
+            }
+            &.prev,
+            &.next {
+                padding: 4px 16px 6px 16px;
+            }
+        }
+    }
+    &.btn {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        line-height: 36px;
+        padding: 0px;
+        text-transform: uppercase;
+        color: $color_w;
+        background: $color_2;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

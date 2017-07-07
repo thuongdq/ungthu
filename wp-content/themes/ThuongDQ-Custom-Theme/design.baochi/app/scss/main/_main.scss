@@ -1,0 +1,33 @@
+.page-content {
+    margin-bottom: 0px;
+}
+
+main {
+    .container {
+        background: #fff;
+        padding: 10px 15px;
+        min-height: 500px;
+    }
+    @import 'content-special';
+    @import 'list-post-special';
+    @import 'list-post-other-special';
+    @import 'list-post-hot';
+    @import 'list-post-new-hot-tab';
+    @import 'content';
+    @import 'title-category';
+    @import 'video-main';
+    @import 'video-detail';
+    @import 'video-main-other';
+    @import 'slider';
+    @import 'category';
+    @import 'care';
+    @import 'event';
+    @import 'video';
+    @import 'content-left';
+    @import 'content-right';
+    @import 'pagination';
+    @import 'details';
+    @import 'list-post-other-detail';
+    @import 'child-category';
+    @import 'list-post-video';
+}

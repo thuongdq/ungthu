@@ -1,0 +1,11 @@
+.right {
+    border: 0px;
+    padding: 0px;
+    width: 300px;
+    display: block;
+    float: right;
+    @import "extend";
+    @import "post-special";
+    @import 'most-comments';
+    @import 'pathological-other';
+}

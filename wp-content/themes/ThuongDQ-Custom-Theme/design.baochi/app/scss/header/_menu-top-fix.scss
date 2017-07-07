@@ -1,0 +1,93 @@
+.menu-top-fix {
+    display: table;
+    float: right;
+    text-transform: uppercase;
+    padding: 12px 0px;
+    &>.nav {
+        display: block;
+        float: left;
+        &>li {
+            &>a {
+                color: $color_1;
+                font-size: 13px;
+                line-height: 36px;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                background: $color_8;
+                padding: 0px 15px;
+            }
+        }
+        &>li+li {
+            margin-left: 4px;
+        }
+    }
+    .contact {
+        margin-left: 10px;
+        display: block;
+        float: left;
+        &>.nav {
+            display: block;
+            float: left;
+            padding: 12px 7px;
+            background: $color_3;
+            border-radius: 4px;
+            li {
+                a {
+                    color: $color_w;
+                    font-size: 11px;
+                    line-height: 12px;
+                    font-family: 'Roboto', sans-serif;
+                    text-transform: uppercase;
+                    padding: 0px 7px;
+                    border-right: 1px solid $color_w;
+                    border-radius: 0px;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:last-child {
+                    a {
+                        border: 0px;
+                    }
+                }
+            }
+        }
+        .account {
+            background: $color_3;
+            border: 0px;
+            padding: 0px;
+            margin-left: 4px;
+            a {
+                color: $color_w;
+                display: block;
+                height: 36px;
+                width: 40px;
+                padding: 0px;
+                text-indent: -99999px;
+                @include background($url_icon, no-repeat, 12px 7px);
+            }
+        }
+    }
+    .navbar-form {
+        margin: 0px;
+        padding: 0px 20px;
+        input {
+            height: 36px;
+            width: 200px;
+            background: $color_1;
+            border-color: $color_9;
+            &:focus {
+                border-right: 0px;
+                box-shadow: none;
+            }
+        }
+        button {
+            height: 36px;
+            font-size: 16px;
+            background: $color_1;
+            color: $color_10;
+            border-left: 0px;
+            border-color: $color_9;
+        }
+    }
+}

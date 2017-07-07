@@ -1,0 +1,41 @@
+.list-post-new {
+    border: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    .panel-heading {
+        @include title-box(82px);
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            li {
+                padding: 8px 0px;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color_12;
+                }
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+                img {
+                    height: 122px;
+                }
+                a {
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    display: block;
+                    width: 100%;
+                }
+                span {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 12px;
+                    color: $color_16;
+                }
+            }
+        }
+    }
+}

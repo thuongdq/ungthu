@@ -1,0 +1,15 @@
+.content {
+    &.newspaper {
+        width: calc(100% - 315px);
+        display: block;
+        float: left;
+        section {
+            float: left;
+        }
+    }
+    &.multi-media {
+        width: calc(100% - 215px);
+        display: block;
+        float: right;
+    }
+}

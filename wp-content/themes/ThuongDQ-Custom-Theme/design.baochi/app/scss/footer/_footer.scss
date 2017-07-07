@@ -1,0 +1,35 @@
+footer {
+    background: $color_1;
+    min-height: 231px;
+    .front-info {
+        background: $color_2;
+        padding: 12px 0px;
+        .nav {
+            display: block;
+            float: left;
+            padding: 12px 10px;
+            background: #660000;
+            border-radius: 4px;
+            li {
+                a {
+                    color: #fff;
+                    font-size: 11px;
+                    line-height: 12px;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    padding: 0px 7px;
+                    border-radius: 0px;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:last-child {
+                    a {
+                        border: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

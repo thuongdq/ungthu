@@ -1,0 +1,61 @@
+.list-post-new-hot-tab {
+    display: block;
+    float: left;
+    width: calc(100% - 300px - 485px);
+    padding: 0px 15px;
+    .nav-tabs {
+        border: 0px;
+        li {
+            display: block;
+            width: 50%;
+            margin: 0px;
+            a {
+                display: block;
+                padding: 0px;
+                margin: 0px;
+                border-radius: 0px;
+                border: 0px;
+                background: $color_1;
+                color: $color_w;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                line-height: 35px;
+                &:focus,
+                &:hover {
+                    color: $color_w;
+                    border: 0px;
+                    background: $color_7;
+                }
+            }
+            &.active {
+                a {
+                    background: $color_7;
+                }
+            }
+        }
+    }
+    .tab-content {
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            li {
+                padding: 7px 0px 7px 0px;
+                background: $color_6;
+                margin-bottom: 1px;
+                a {
+                    padding-left: 24px;
+                    @include background($url_icon, no-repeat, 10px -62px);
+                    display: block;
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: bold;
+                    color: $color_b;
+                }
+            }
+        }
+    }
+}

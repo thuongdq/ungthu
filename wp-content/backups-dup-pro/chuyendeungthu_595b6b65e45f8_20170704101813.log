@@ -1,0 +1,78 @@
+********************************************************************************
+DUPLICATOR PRO PACKAGE-LOG: 2017-07-04 10:18:33
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	3.3.4
+WORDPRESS:	4.8
+PHP INFO:	7.0.20 | SAPI: apache2handler
+SERVER:		Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.0.20 
+PHP TIME LIMIT: [7200] not allowed 
+PHP MAX MEMORY: 5000M (256M default) 
+RUN TYPE: Manual
+MEMORY STACK: 4MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP 
+MYSQLDUMP:    Is Supported
+MYSQLTIMEOUT: 5000 
+TABLES: total:15 | filtered:0 | create:15 
+FILTERED: [] 
+RESPONSE: Ran from C:/xampp/mysql/bin/mysqldump.exe 
+SQL CREATED: chuyendeungthu_595b6b65e45f8_20170704101813_database.sql 
+SQL FILE SIZE: 17.4MB 
+SQL FILE TIME: 2017-07-04 10:18:35 
+SQL RUNTIME: 2.18 sec. 
+MEMORY STACK: 4MB 
+
+******************************************************************************** 
+ARCHIVE Type=ZIP Mode=ZipArchive 
+******************************************************************************** 
+ARCHIVE DIR:  D:/xampp/htdocs/ungthu.nguoiduatin.vn 
+ARCHIVE FILE: chuyendeungthu_595b6b65e45f8_20170704101813_archive.zip 
+FILTERS: *OFF* 
+DIRS:  not set 
+EXTS:  not set 
+FILES:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	162.77MB 
+STATS:	Dirs 3,514 | Files 23,141 | Total 26,655 
+SQL ADDED: chuyendeungthu_595b6b65e45f8_20170704101813_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 0
+    [filename] => 
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 69.42MB 
+ARCHIVE RUNTIME: 18.97 sec. 
+MEMORY STACK: 90MB 
+Installer files added to archive 
+
+******************************************************************************** 
+STORAGE: 
+******************************************************************************** 
+LOCAL: Default, D:/xampp/htdocs/ungthu.nguoiduatin.vn/wp-content/backups-dup-pro 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL FILE: 17.4MB 
+INSTALLER FILE: 14.47KB 
+ARCHIVE FILE: 70.31MB  
+EXPECTED FILE/DIRECTORY COUNT: 26,655 
+ACTUAL FILE/DIRECTORY COUNT: 26,655 
+ARCHIVE CONSISTENCY TEST: Pass 
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 277.18 sec.
+PEAK PHP MEMORY USED: 6MB
+DONE PROCESSING => chuyendeungthu 2017-07-04 10:23:10
+ 
